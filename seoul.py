@@ -15,7 +15,7 @@ from datetime import datetime
 from struct import unpack
 
 
-SIZE = (1920, 1080)
+SIZE = (1024, 600)
 
 HOST = '127.0.0.1'
 PORT = 9999
@@ -161,8 +161,8 @@ if __name__ == '__main__':
     root = tk.Tk()
     root.title('seoul - GR display')
     root.geometry('{}x{}'.format(SIZE[0], SIZE[1]))
-    root.resizable(False, False)
-    root.attributes('-fullscreen', True)
+    #root.resizable(False, False)
+    #root.attributes('-fullscreen', True)
 
     top_frame = tk.Frame(root)
     top_frame.pack(side=tk.TOP)
