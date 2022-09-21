@@ -72,7 +72,7 @@ def set_go_send(event):
 
 go_out, go_send = False, False
 c_root = Tk()
-c_root.geometry('500x500+50+50')
+c_root.geometry('500x400+50+50')
 c_root.title('seoul - GR VMU mockup')
 c_root.resizable(True, True)
 
@@ -89,41 +89,41 @@ logout_button = Button(c_root,text='Log Out',state = 'disabled', command = try_l
 ''' Middle Menu '''
 chat_frame = Frame(c_root)
 scrollbar = Scrollbar(chat_frame) ; scrollbar.pack(side='right',fill='y')
-chat_log = Text(chat_frame, width = 62, height = 24, state = 'disabled', yscrollcommand = scrollbar.set) ; chat_log.pack(side='left')#place(x=20, y=60)
+chat_log = Text(chat_frame, width = 62, height = 12, state = 'disabled', yscrollcommand = scrollbar.set) ; chat_log.pack(side='left')#place(x=20, y=60)
 scrollbar['command'] = chat_log.yview
 chat_frame.place(x=20, y=60)
 
 ''' test vmu button '''
 check_vcu = IntVar()
 vcu_button = Checkbutton(c_root, text='VCU', variable=check_vcu, command=lambda: set_go_send(None))
-vcu_button.place(x=0, y=405)
+vcu_button.place(x=0, y=255)
 
 check_actioncam = IntVar()
 actioncam_button = Checkbutton(c_root, text='ACTIONCAM', variable=check_actioncam, command=lambda: set_go_send(None))
-actioncam_button.place(x=60, y=405)
+actioncam_button.place(x=60, y=255)
 
 check_nfc = IntVar()
 nfc_button = Checkbutton(c_root, text='NFC', variable=check_nfc, command=lambda: set_go_send(None))
-nfc_button.place(x=160, y=405)
+nfc_button.place(x=160, y=255)
 
 check_imu = IntVar()
 imu_button = Checkbutton(c_root, text='IMU', variable=check_imu, command=lambda: set_go_send(None))
-imu_button.place(x=220, y=405)
+imu_button.place(x=220, y=255)
 
 check_battery = IntVar()
 battery_button = Checkbutton(c_root, text='BATTERY', variable=check_battery, command=lambda: set_go_send(None))
-battery_button.place(x=280, y=405)
+battery_button.place(x=280, y=255)
 
 check_brake = IntVar()
 brake_button = Checkbutton(c_root, text='BRAKE', variable=check_brake, command=lambda: set_go_send(None))
-brake_button.place(x=370, y=405)
+brake_button.place(x=370, y=255)
 
 check_gps = IntVar()
 gps_button = Checkbutton(c_root, text='GPS', variable=check_gps, command=lambda: set_go_send(None))
-gps_button.place(x=440, y=405)
+gps_button.place(x=440, y=255)
 
 ''' Bottom Menu '''
-close_button = Button(c_root,text='Close',command=exit); close_button.place(x=200, y = 460)
+close_button = Button(c_root,text='Close',command=exit); close_button.place(x=200, y = 360)
 
 c_root.mainloop()
 
