@@ -179,7 +179,7 @@ if __name__ == '__main__':
 
     lbl_1 = ImageLabel(center_frame)
     lbl_1.pack()
-    lbl_1.load('./images/rabbit_car_480px.gif')
+    lbl_1.load('./images/paimon_480px.gif')
 
     bottom_frame = tk.Frame(root)
     bottom_frame.pack(side=tk.BOTTOM)
